@@ -16,14 +16,46 @@ function getComputerChoice() {
   }
 }
 
+// const getNgeruBtn = document.getElementById("Ngeru_btn");
+// getNgeruBtn.addEventListener("click", playRound);
+
+function chooseNgeru() {
+  playerSelection = rock;
+  return console.log(playerSelection);
+}
+
+let playerSelection;
+
+const getNgeruBtn = document.querySelector("#ngeru_btn");
+getNgeruBtn.addEventListener("click", () => {
+  computerSelection = getComputerChoice();
+  playerSelection = rock;
+  return playRound(playerSelection, computerSelection);
+});
+
+function myFunction1() {
+  document.getElementById("score_user").innerHTML += playerScore;
+}
+
+function myFunction2() {
+  document.getElementById("score_computer").innerHTML += computerScore;
+}
+
+myFunction1();
+myFunction2();
+
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return "Draw";
   } else if (playerSelection === rock && computerSelection == scissors) {
-    playerScore++;
+    document.getElementById("score_user").innerHTML = playerScore++;
+    document.getElementById("summary").innerHTML =
+      "Rock beats Scissors, you win!";
     return "Rock beats Scissors, you win!";
   } else if (playerSelection === rock && computerSelection == paper) {
     computerScore++;
+    document.getElementById("summary").innerHTML =
+      "Paper beats Rock, you lose!";
     return "Paper beats Rock, you lose!";
   } else if (playerSelection === paper && computerSelection == scissors) {
     computerScore++;
@@ -39,38 +71,6 @@ function playRound(playerSelection, computerSelection) {
     return "Scissors beats Paper, you win!";
   }
 }
-
-const computerSelection = getComputerChoice();
-
-const getNgeruBtn = document.getElementById("Ngeru_btn");
-getNgeruBtn.addEventListener("click", chooseNgeru);
-
-function chooseNgeru() {
-  let playerSelection = rock;
-  return playerSelection;
-}
-
-const getPiwikawakaBtn = document.getElementById("Piwikawaka_btn");
-getPiwikawakaBtn.addEventListener("click", choosePiwikawaka);
-
-function choosePiwikawaka() {
-  let playerSelection = paper;
-  return playerSelection;
-}
-
-const getKaumatuaBtn = document.getElementById("Kaumatua_btn");
-getKaumatuaBtn.addEventListener("click", chooseKaumatua);
-
-function chooseKaumatua() {
-  let playerSelection = scissors;
-  return playerSelection;
-}
-
-function myFunction1() {
-  document.getElementById("result").innerHTML += playerScore;
-}
-
-myFunction1();
 
 // function game() {
 //   let gameLength = 5;
