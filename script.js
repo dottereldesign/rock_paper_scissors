@@ -41,9 +41,7 @@ document.getElementById("score_user").innerHTML = playerScore;
 document.getElementById("score_computer").innerHTML = computerScore;
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection === computerSelection) {
-    document.getElementById("summary").innerHTML = "Draw!";
-  } else if (playerSelection === rock && computerSelection === scissors) {
+  if (playerSelection === rock && computerSelection === scissors) {
     document.getElementById("score_user").innerHTML = playerScore++;
     document.getElementById("summary").innerHTML =
       "rock beats scissors, you win!";
@@ -66,6 +64,8 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById("score_user").innerHTML = playerScore++;
     document.getElementById("summary").innerHTML =
       "scissors beats paper, you win!";
+  } else {
+    document.getElementById("summary").innerHTML = "Draw!";
   }
 }
 
