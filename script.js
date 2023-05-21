@@ -1,35 +1,40 @@
-rock = "Rock";
-paper = "Paper";
-scissors = "Scissors";
+ngeru = "Ngeru";
+kaumatua = "Kaumātua";
+piwakawaka = "Pīwakawaka";
 
-playerScore = 0;
-computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
   if (randomNumber === 1) {
-    return rock;
+    return ngeru;
   } else if (randomNumber === 2) {
-    return scissors;
+    return piwakawaka;
   } else {
-    return paper;
+    return kaumatua;
   }
 }
-
-// const getNgeruBtn = document.getElementById("Ngeru_btn");
-// getNgeruBtn.addEventListener("click", playRound);
-
-function chooseNgeru() {
-  playerSelection = rock;
-  return console.log(playerSelection);
-}
-
-let playerSelection;
 
 const getNgeruBtn = document.querySelector("#ngeru_btn");
 getNgeruBtn.addEventListener("click", () => {
   computerSelection = getComputerChoice();
-  playerSelection = rock;
+  playerSelection = ngeru;
+  return playRound(playerSelection, computerSelection);
+});
+
+const getPiwakawakaBtn = document.querySelector("#piwakawaka_btn");
+getPiwakawakaBtn.addEventListener("click", () => {
+  computerSelection = getComputerChoice();
+  playerSelection = piwakawaka;
+  console.log(playRound(playerSelection, computerSelection));
+  return playRound(playerSelection, computerSelection);
+});
+
+const getKaumatuaBtn = document.querySelector("#kaumatua_btn");
+getKaumatuaBtn.addEventListener("click", () => {
+  computerSelection = getComputerChoice();
+  playerSelection = kaumatua;
   return playRound(playerSelection, computerSelection);
 });
 
@@ -46,41 +51,39 @@ myFunction2();
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    return "Draw";
-  } else if (playerSelection === rock && computerSelection == scissors) {
+    document.getElementById("summary").innerHTML = "Draw!";
+  } else if (playerSelection === ngeru && computerSelection === piwakawaka) {
     document.getElementById("score_user").innerHTML = playerScore++;
     document.getElementById("summary").innerHTML =
-      "Rock beats Scissors, you win!";
-    return "Rock beats Scissors, you win!";
-  } else if (playerSelection === rock && computerSelection == paper) {
-    computerScore++;
+      "Ngeru beats Pīwakawaka, you win!";
+  } else if (playerSelection === ngeru && computerSelection === kaumatua) {
+    document.getElementById("score_computer").innerHTML = computerScore++;
     document.getElementById("summary").innerHTML =
-      "Paper beats Rock, you lose!";
-    return "Paper beats Rock, you lose!";
-  } else if (playerSelection === paper && computerSelection == scissors) {
-    computerScore++;
-    return "Scissors beats Paper, you lose!";
-  } else if (playerSelection === paper && computerSelection == rock) {
-    playerScore++;
-    return "Paper beats Rock, you win!";
-  } else if (playerSelection === scissors && computerSelection == rock) {
-    computerScore++;
-    return "Rock beats Scissors, you lose!";
-  } else if (playerSelection === scissors && computerSelection == paper) {
-    playerScore++;
-    return "Scissors beats Paper, you win!";
+      "Kaumātua beats Ngeru, you lose!";
+  } else if (playerSelection === kaumatua && computerSelection === piwakawaka) {
+    document.getElementById("score_computer").innerHTML = computerScore++;
+    document.getElementById("summary").innerHTML =
+      "Pīwakawaka beats Kaumātua, you lose!";
+  } else if (playerSelection === kaumatua && computerSelection === ngeru) {
+    document.getElementById("score_user").innerHTML = playerScore++;
+    document.getElementById("summary").innerHTML =
+      "Kaumātua beats Ngeru, you win!";
+  } else if (playerSelection === piwakawaka && computerSelection === ngeru) {
+    document.getElementById("score_user").innerHTML = computerScore++;
+    document.getElementById("summary").innerHTML =
+      "Ngeru beats Pīwakawaka, you lose!";
+  } else if (playerSelection === piwakawaka && computerSelection === kaumatua) {
+    document.getElementById("score_user").innerHTML = playerScore++;
+    document.getElementById("summary").innerHTML =
+      "Pīwakawaka beats Kaumātua, you win!";
   }
 }
 
 // function game() {
 //   let gameLength = 5;
 //   for (let i = 0; i < gameLength; i++) {
-//     playerSelection = prompt("Rock, Paper, or Scissors?");
+//     playerSelection = prompt("Ngeru, Kaumatua, or Scissors?");
 //     console.log(playRound(playerSelection, computerSelection));
 //     console.log(playerScore, computerScore);
 //   }
 // }
-
-// game();
-
-// Ngeru(Cat) -> Piwakawaka(Fantail) -> Kaumatua(Elder)
