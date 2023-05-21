@@ -9,7 +9,7 @@ header {
   font-size: 3rem;
 
   justify-content: center;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .scissors {
@@ -65,7 +65,9 @@ main {
 .choice > button {
   width: 100px;
   height: 100px;
-  background-color: green;
+  background-color: #a459d1;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .result {
@@ -80,12 +82,13 @@ main {
   align-items: center;
   width: 100px;
   height: 100px;
-  background-color: blue;
+  background-color: #2cd3e1;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 #score_computer {
-  background-color: red;
+  background-color: #f266ab;
 }
 
 #summary {
