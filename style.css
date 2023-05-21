@@ -12,15 +12,15 @@ header {
   font-weight: bold;
 }
 
-.Piwakawaka {
+.scissors {
   margin: 0 48px;
 }
 
-.Ngeru {
+.rock {
   position: relative;
 }
 
-.Ngeru::after {
+.rock::after {
   content: "cat";
   position: absolute;
   bottom: -18px;
@@ -29,11 +29,11 @@ header {
   font-weight: initial;
 }
 
-.Piwakawaka {
+.scissors {
   position: relative;
 }
 
-.Piwakawaka::after {
+.scissors::after {
   content: "fantail";
   position: absolute;
   bottom: -18px;
@@ -42,11 +42,11 @@ header {
   font-weight: initial;
 }
 
-.Kaumatua {
+.paper {
   position: relative;
 }
 
-.Kaumatua::after {
+.paper::after {
   content: "elder";
   position: absolute;
   bottom: -18px;
