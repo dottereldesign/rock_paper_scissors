@@ -87,3 +87,8 @@ main {
 #score_computer {
   background-color: red;
 }
+
+#summary {
+  margin-top: 64px;
+  font-size: 1.6rem;
+}
