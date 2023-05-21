@@ -1,0 +1,66 @@
+* {
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+header {
+  display: flex;
+  font-size: 3rem;
+  font-family: Calibri;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.Piwakawaka {
+  margin: 0 48px;
+}
+
+.Ngeru {
+  position: relative;
+}
+
+.Ngeru::after {
+  content: "cat";
+  position: absolute;
+  bottom: -12px;
+  right: 1px;
+  font-size: 1.5rem;
+  font-weight: initial;
+}
+
+.Piwakawaka {
+  position: relative;
+}
+
+.Piwakawaka::after {
+  content: "fantail";
+  position: absolute;
+  bottom: -14px;
+  right: 2px;
+  font-size: 1.5rem;
+  font-weight: initial;
+}
+
+.Kaumatua {
+  position: relative;
+}
+
+.Kaumatua::after {
+  content: "elder";
+  position: absolute;
+  bottom: -14px;
+  right: 3px;
+  font-size: 1.5rem;
+  font-weight: initial;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 96px;
+}
+
+#result {
+  margin-top: 64px;
+}
