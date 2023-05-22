@@ -16,6 +16,36 @@ function getComputerChoice() {
   }
 }
 
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === rock && computerSelection === scissors) {
+    document.getElementById("score_user").innerHTML = ++playerScore;
+    document.getElementById("summary").innerHTML =
+      "rock beats scissors, you win!";
+    return console.log(playerScore);
+  } else if (playerSelection === rock && computerSelection === paper) {
+    document.getElementById("score_computer").innerHTML = ++computerScore;
+    document.getElementById("summary").innerHTML =
+      "paper beats rock, you lose!";
+  } else if (playerSelection === paper && computerSelection === scissors) {
+    document.getElementById("score_computer").innerHTML = ++computerScore;
+    document.getElementById("summary").innerHTML =
+      "scissors beats paper, you lose!";
+  } else if (playerSelection === paper && computerSelection === rock) {
+    document.getElementById("score_user").innerHTML = ++playerScore;
+    document.getElementById("summary").innerHTML = "paper beats rock, you win!";
+  } else if (playerSelection === scissors && computerSelection === rock) {
+    document.getElementById("score_computer").innerHTML = ++computerScore;
+    document.getElementById("summary").innerHTML =
+      "rock beats scissors, you lose!";
+  } else if (playerSelection === scissors && computerSelection === paper) {
+    document.getElementById("score_user").innerHTML = ++playerScore;
+    document.getElementById("summary").innerHTML =
+      "scissors beats paper, you win!";
+  } else {
+    document.getElementById("summary").innerHTML = "Draw!";
+  }
+}
+
 const getRockBtn = document.querySelector("#rock_btn");
 getRockBtn.addEventListener("click", () => {
   computerSelection = getComputerChoice();
@@ -40,32 +70,10 @@ getPaperBtn.addEventListener("click", () => {
 document.getElementById("score_user").innerHTML = playerScore;
 document.getElementById("score_computer").innerHTML = computerScore;
 
-function playRound(playerSelection, computerSelection) {
-  if (playerSelection === rock && computerSelection === scissors) {
-    document.getElementById("score_user").innerHTML = playerScore++;
-    document.getElementById("summary").innerHTML =
-      "rock beats scissors, you win!";
-  } else if (playerSelection === rock && computerSelection === paper) {
-    document.getElementById("score_computer").innerHTML = computerScore++;
-    document.getElementById("summary").innerHTML =
-      "paper beats rock, you lose!";
-  } else if (playerSelection === paper && computerSelection === scissors) {
-    document.getElementById("score_computer").innerHTML = computerScore++;
-    document.getElementById("summary").innerHTML =
-      "scissors beats paper, you lose!";
-  } else if (playerSelection === paper && computerSelection === rock) {
-    document.getElementById("score_user").innerHTML = playerScore++;
-    document.getElementById("summary").innerHTML = "paper beats rock, you win!";
-  } else if (playerSelection === scissors && computerSelection === rock) {
-    document.getElementById("score_computer").innerHTML = computerScore++;
-    document.getElementById("summary").innerHTML =
-      "rock beats scissors, you lose!";
-  } else if (playerSelection === scissors && computerSelection === paper) {
-    document.getElementById("score_user").innerHTML = playerScore++;
-    document.getElementById("summary").innerHTML =
-      "scissors beats paper, you win!";
-  } else {
-    document.getElementById("summary").innerHTML = "Draw!";
+function showWinner() {
+  if (playerScore === 5) {
+    winner = getElementById.("#winner");
+    
   }
 }
 
