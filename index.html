@@ -6,34 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c627734373.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
-      <div class="rock">KOURA</div>
+      <div class="rock">KŌURA</div>
       <div class="scissors">KUTIKUTI</div>
-      <div class="paper">PEPE</div>
+      <div class="paper">PEPA</div>
     </header>
     <main>
+      <p class="sub_heading">Choose your hand below</p>
       <div class="choice">
         <button id="rock_btn"></button>
         <button id="scissors_btn"></button>
         <button id="paper_btn"></button>
       </div>
 
-      <div id="summary"></div>
-
+      <div class="names">
+        <h4>You</h4>
+        <h4>Computer</h4>
+      </div>
       <div class="result">
         <div class="score_wrapper">
-          <h4>You</h4>
           <div id="score_user"></div>
         </div>
-
+        <p>VS</p>
         <div class="score_wrapper">
-          <h4>Computer</h4>
           <div id="score_computer"></div>
         </div>
       </div>
+
+      <div id="summary"></div>
 
       <div id="winner">asd</div>
 
@@ -47,6 +60,14 @@
         </ul>
       </div>
     </main>
+    <footer>
+      <a href="https://github.com/dottereldesign">
+        <div class="social">
+          <i class="fa-brands fa-github"></i>
+          <p>Created by Jamie Wilson</p>
+        </div>
+      </a>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
