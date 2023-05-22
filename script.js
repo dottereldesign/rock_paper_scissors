@@ -21,26 +21,31 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById("score_user").innerHTML = ++playerScore;
     document.getElementById("summary").innerHTML =
       "rock beats scissors, you win!";
-    return console.log(playerScore);
+    return showWinner();
   } else if (playerSelection === rock && computerSelection === paper) {
     document.getElementById("score_computer").innerHTML = ++computerScore;
     document.getElementById("summary").innerHTML =
       "paper beats rock, you lose!";
+    return showWinner();
   } else if (playerSelection === paper && computerSelection === scissors) {
     document.getElementById("score_computer").innerHTML = ++computerScore;
     document.getElementById("summary").innerHTML =
       "scissors beats paper, you lose!";
+    return showWinner();
   } else if (playerSelection === paper && computerSelection === rock) {
     document.getElementById("score_user").innerHTML = ++playerScore;
     document.getElementById("summary").innerHTML = "paper beats rock, you win!";
+    return showWinner();
   } else if (playerSelection === scissors && computerSelection === rock) {
     document.getElementById("score_computer").innerHTML = ++computerScore;
     document.getElementById("summary").innerHTML =
       "rock beats scissors, you lose!";
+    return showWinner();
   } else if (playerSelection === scissors && computerSelection === paper) {
     document.getElementById("score_user").innerHTML = ++playerScore;
     document.getElementById("summary").innerHTML =
       "scissors beats paper, you win!";
+    return showWinner();
   } else {
     document.getElementById("summary").innerHTML = "Draw!";
   }
@@ -71,17 +76,17 @@ document.getElementById("score_user").innerHTML = playerScore;
 document.getElementById("score_computer").innerHTML = computerScore;
 
 function showWinner() {
-  if (playerScore === 5) {
-    winner = getElementById.("#winner");
-    
+  if (playerScore === 6) {
+    document.getElementById("winner").innerHTML = "You win!";
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("score_user").innerHTML = playerScore;
+    document.getElementById("score_computer").innerHTML = computerScore;
+  } else if (computerScore === 5) {
+    document.getElementById("winner").innerHTML = "You lose!";
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("score_user").innerHTML = playerScore;
+    document.getElementById("score_computer").innerHTML = computerScore;
   }
 }
-
-// function game() {
-//   let gameLength = 5;
-//   for (let i = 0; i < gameLength; i++) {
-//     playerSelection = prompt("rock, paper, or Scissors?");
-//     console.log(playRound(playerSelection, computerSelection));
-//     console.log(playerScore, computerScore);
-//   }
-// }
