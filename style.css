@@ -80,6 +80,17 @@ main {
 .result {
   margin-top: 64px;
   display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+h4 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.score_wrapper {
+  text-align: center;
 }
 
 #score_user,
@@ -108,14 +119,14 @@ main {
 }
 
 .rules h3 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 64px;
+  margin-top: 32px;
 }
 
 .rules ul {
   list-style-type: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-top: 8px;
 }
@@ -124,13 +135,49 @@ main {
   padding-top: 5px;
 }
 
-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  transition: transform 0.2s; /* Animation */
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-img:hover {
+button:hover {
   transform: scale(1.05);
+}
+
+#rock_btn {
+  width: 200px;
+  height: 200px;
+  background: #f0f0f0 url("images/rock.png");
+  background-position: center;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  transition: transform 0.2s; /* Animation */
+  border-radius: 100%;
+}
+
+#scissors_btn {
+  width: 200px;
+  height: 200px;
+  background: #f0f0f0 url("images/scissors.png");
+  background-position: center;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out; /* Animation */
+  border-radius: 100%;
+}
+
+#paper_btn {
+  width: 200px;
+  height: 200px;
+  background: #f0f0f0 url("images/paper.png");
+  background-position: center;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out; /* Animation */
+  border-radius: 100%;
 }

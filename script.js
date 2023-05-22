@@ -76,7 +76,7 @@ document.getElementById("score_user").innerHTML = playerScore;
 document.getElementById("score_computer").innerHTML = computerScore;
 
 function showWinner() {
-  if (playerScore === 6) {
+  if (playerScore === 5) {
     document.getElementById("winner").innerHTML = "You win!";
     playerScore = 0;
     computerScore = 0;
