@@ -16,19 +16,6 @@ function getComputerChoice() {
   }
 }
 
-// function currentHand() {
-//   let currentRock = document.getElementbyID;
-//   if (playerSelection === rock) {
-//     document.getElementById("score_card-1").classList.add("score_card-rock");
-//     document
-//       .getElementById("score_card-2")
-//       .classList.add("score_card-scissors");
-//     var el = document.getElementById("divID");
-//     // Removing class
-//     el.classList.remove("my-class");
-//   }
-// }
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === rock && computerSelection === scissors) {
     document.getElementById("score_card-1").className = "score_card-rock";
