@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
+    <title>RPS</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/c627734373.js"
@@ -32,32 +32,31 @@
         <button id="paper_btn"></button>
       </div>
 
-      <div class="names">
-        <h4>You</h4>
-        <h4>Computer</h4>
-      </div>
-
       <div class="result">
-        <div class="score_card-wrapper">
-          <div class="score_wrapper">
-            <div id="score_user"></div>
+        <div class="result_player">
+          <h4>You</h4>
+          <div class="score_card-wrapper">
+            <div class="score_wrapper">
+              <div id="score_user"></div>
+            </div>
+            <div id="score_card-1"></div>
           </div>
-          <div id="score_card-1"></div>
         </div>
 
         <p>VS</p>
 
-        <div class="score_card-wrapper">
-          <div id="score_card-2"></div>
-          <div class="score_wrapper">
-            <div id="score_computer"></div>
+        <div class="result_player">
+          <h4>Computer</h4>
+          <div class="score_card-wrapper">
+            <div id="score_card-2"></div>
+            <div class="score_wrapper">
+              <div id="score_computer"></div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="summary"></div>
-
-      <div id="winner">asd</div>
+      <div id="summary">Rock, Paper, or Scissors?</div>
 
       <div class="rules">
         <h3>Rules</h3>
