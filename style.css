@@ -240,8 +240,8 @@ footer p {
   display: flex;
 }
 
-.score_card-1,
-.score_card-2 {
+#score_card-1,
+#score_card-2 {
   background-color: white;
   width: 120px;
   height: 120px;
@@ -250,8 +250,8 @@ footer p {
   align-items: center;
 }
 
-.score_card-1 {
-  background: #f0f0f0 url("images/paper_small.png");
+.score_card-scissors {
+  background: #f0f0f0 url("images/scissors_small.png");
   background-position: center;
   background-size: 100px 100px;
   background-repeat: no-repeat;
@@ -259,8 +259,17 @@ footer p {
   background-color: white;
 }
 
-.score_card-2 {
+.score_card-rock {
   background: #f0f0f0 url("images/rock_small.png");
+  background-position: center;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+  background-color: white;
+}
+
+.score_card-paper {
+  background: #f0f0f0 url("images/paper_small.png");
   background-position: center;
   background-size: 100px 100px;
   background-repeat: no-repeat;
