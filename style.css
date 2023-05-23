@@ -102,6 +102,7 @@ select {
   font-family: var(--ff-primary-100);
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: center;
@@ -336,32 +337,6 @@ button:hover {
   border-radius: 100%;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  margin: 48px 0;
-}
-
-footer a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer i {
-  margin-right: 16px;
-  font-size: 2rem;
-}
-
-footer p {
-  font-size: 1.2rem;
-}
-
 .score_card-wrapper {
   display: flex;
 }
@@ -405,4 +380,42 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+}
+
+footer a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer i {
+  margin-right: 16px;
+  font-size: 1.5rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  footer i {
+    margin-right: 16px;
+    font-size: 2rem;
+  }
 }
