@@ -102,6 +102,14 @@ select {
   font-family: var(--ff-primary-100);
 }
 
+main,
+section,
+article,
+footer {
+  width: min(100%, 1110px);
+  margin: 0 auto;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -155,8 +163,14 @@ header {
 
 @media (min-width: 768px) {
   header {
-    font-size: var(--fs-700);
+    font-size: var(--fs-800);
     margin-top: 24px;
+  }
+
+  .paper::after,
+  .rock::after,
+  .scissors::after {
+    font-size: var(--fs-600);
   }
 }
 
@@ -386,7 +400,8 @@ button:hover {
 footer {
   display: flex;
   justify-content: center;
-  margin: 48px 0;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 footer a {
