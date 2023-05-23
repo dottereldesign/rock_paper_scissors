@@ -1,4 +1,7 @@
 :root {
+  --ff-primary-100: "Open Sans", sans-serif;
+  --ff-primary-200: "Chivo Mono", monospace;
+
   --fs-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
   --fs-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
   --fs-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
@@ -7,6 +10,24 @@
   --fs-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
   --fs-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
   --fs-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  --clr-primary-100: hsl(195, 93%, 47%);
+  --clr-primary-200: hsl(329, 79%, 58%);
+  --clr-primary-300: hsl(66, 70%, 52%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 10%);
+  --clr-neutral-300: hsl(0, 0%, 0%);
+  --clr-neutral-400: hsl(120, 80%, 55%);
+  --clr-neutral-400: hsl(0, 80%, 55%);
 }
 
 *,
@@ -39,9 +60,7 @@ html:focus-within {
 
 body {
   min-height: 100vh;
-
   text-rendering: optimizeSpeed;
-
   line-height: 1.5;
 }
 
@@ -52,7 +71,6 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-
   display: block;
 }
 
@@ -72,11 +90,8 @@ select {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-
     animation-iteration-count: 1 !important;
-
     transition-duration: 0.01ms !important;
-
     scroll-behavior: auto !important;
   }
 }
@@ -84,7 +99,7 @@ select {
 * {
   background-color: #1a1a1a;
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--ff-primary-100);
 }
 
 header {
@@ -177,7 +192,7 @@ main {
 .result p {
   font-size: 4rem;
   font-weight: 800;
-  font-family: "Chivo Mono", monospace;
+  font-family: var(--ff-primary-200);
 }
 
 .names {
