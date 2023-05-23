@@ -124,7 +124,7 @@ h4 {
   width: 120px;
   height: 120px;
   background-color: #2cd3e1;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -234,4 +234,36 @@ footer i {
 
 footer p {
   font-size: 1.2rem;
+}
+
+.score_card-wrapper {
+  display: flex;
+}
+
+.score_card-1,
+.score_card-2 {
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score_card-1 {
+  background: #f0f0f0 url("images/paper_small.png");
+  background-position: center;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+  background-color: white;
+}
+
+.score_card-2 {
+  background: #f0f0f0 url("images/rock_small.png");
+  background-position: center;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+  background-color: white;
 }
