@@ -25,39 +25,33 @@
       <div class="paper">PEPA</div>
     </header>
 
-    <!-- <main>
+    <main>
       <p class="sub_heading">Choose your hand below</p>
       <div class="choice">
         <button id="rock_btn"></button>
         <button id="scissors_btn"></button>
         <button id="paper_btn"></button>
       </div>
-    </main> -->
+    </main>
 
     <section>
       <div class="result">
         <div class="result_container">
-          <div class="result_player">
-            <div class="score_card-wrapper">
-              <div class="score_wrapper">
-                <div id="score_user"></div>
-              </div>
-              <div id="score_card-1"></div>
+          <div class="result_grid-1 score_card-wrapper">
+            <div class="score_wrapper">
+              <div id="score_user"></div>
             </div>
+            <div id="score_card-1"></div>
           </div>
 
-          <div class="vs_container">
+          <div class="result_grid-2 vs_container">
             <p>VS</p>
           </div>
 
-          <div class="result_container">
-            <div class="result_player">
-              <div class="score_card-wrapper">
-                <div id="score_card-2"></div>
-                <div class="score_wrapper">
-                  <div id="score_computer"></div>
-                </div>
-              </div>
+          <div class="result_grid-3">
+            <div id="score_card-2"></div>
+            <div class="score_wrapper">
+              <div id="score_computer"></div>
             </div>
           </div>
         </div>
@@ -67,12 +61,22 @@
     </section>
 
     <section class="rules">
-      <h3>Rules</h3>
-      <ul>
-        <li>1. Rock beats Scissors: Rock smashes or breaks scissors.</li>
-        <li>2. Paper beats Rock: Paper covers and wraps around rock.</li>
-        <li>3. Scissors beats Paper: Scissors cut through paper.</li>
-      </ul>
+      <div class="rules_wrapper">
+        <h3>Rules</h3>
+        <ul>
+          <li>
+            <span>1.</span> Rock beats Scissors: Rock smashes or breaks
+            scissors.
+          </li>
+          <li>
+            <span>2.</span> Paper beats Rock: Paper covers and wraps around
+            rock.
+          </li>
+          <li>
+            <span>3.</span> Scissors beats Paper: Scissors cut through paper.
+          </li>
+        </ul>
+      </div>
     </section>
 
     <footer>
