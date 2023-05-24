@@ -24,33 +24,40 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById("score_user").innerHTML = ++playerScore;
     document.getElementById("summary").innerHTML =
       "Rock beats scissors, you win!";
+    document.getElementById("summary").style.color = "hsl(120, 80%, 55%)";
     return showWinner();
   } else if (playerSelection === rock && computerSelection === paper) {
     document.getElementById("score_computer").innerHTML = ++computerScore;
     document.getElementById("summary").innerHTML =
       "Paper beats rock, you lose!";
+    document.getElementById("summary").style.color = "hsl(0, 80%, 55%)";
     return showWinner();
   } else if (playerSelection === paper && computerSelection === scissors) {
     document.getElementById("score_computer").innerHTML = ++computerScore;
     document.getElementById("summary").innerHTML =
       "Scissors beats paper, you lose!";
+    document.getElementById("summary").style.color = "hsl(0, 80%, 55%)";
     return showWinner();
   } else if (playerSelection === paper && computerSelection === rock) {
     document.getElementById("score_user").innerHTML = ++playerScore;
     document.getElementById("summary").innerHTML = "Paper beats rock, you win!";
+    document.getElementById("summary").style.color = "hsl(120, 80%, 55%)";
     return showWinner();
   } else if (playerSelection === scissors && computerSelection === rock) {
     document.getElementById("score_computer").innerHTML = ++computerScore;
     document.getElementById("summary").innerHTML =
       "Rock beats scissors, you lose!";
+    document.getElementById("summary").style.color = "hsl(0, 80%, 55%)";
     return showWinner();
   } else if (playerSelection === scissors && computerSelection === paper) {
     document.getElementById("score_user").innerHTML = ++playerScore;
     document.getElementById("summary").innerHTML =
       "Scissors beats paper, you win!";
+    document.getElementById("summary").style.color = "hsl(120, 80%, 55%)";
     return showWinner();
   } else {
     document.getElementById("summary").innerHTML = "Draw!";
+    document.getElementById("summary").style.color = "#00FFFF";
   }
 }
 

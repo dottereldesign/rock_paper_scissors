@@ -165,7 +165,7 @@ header {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 520px) {
   header {
     font-size: var(--fs-800);
     margin-top: 0;
@@ -212,25 +212,16 @@ main {
 }
 
 .sub_heading {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
   color: var(--clr-primary-400);
 }
 
 .choice {
   margin-top: 40px;
-}
-
-#scissors_btn {
-  margin: 0 32px;
-}
-
-.choice > button {
-  width: 100px;
-  height: 100px;
-  background-color: #a459d1;
-  font-size: 1.3rem;
-  font-weight: 600;
+  display: grid;
+  grid-template-columns: 1fr 16px 1fr 16px 1fr;
+  width: min(100%, 650px);
 }
 
 button {
@@ -248,35 +239,38 @@ button:hover {
 }
 
 #rock_btn {
-  width: 200px;
-  height: 200px;
+  grid-column: 1;
+  aspect-ratio: 1/1;
+
   background: #f0f0f0 url("images/rock.png");
   background-position: center;
-  background-size: 200px 200px;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.2s; /* Animation */
   border-radius: 100%;
 }
 
 #scissors_btn {
-  width: 200px;
-  height: 200px;
+  grid-column: 3;
+  aspect-ratio: 1/1;
+
   background: #f0f0f0 url("images/scissors.png");
   background-position: center;
-  background-size: 200px 200px;
+  background-size: contain;
   background-repeat: no-repeat;
-  transition: transform 0.2s ease-in-out; /* Animation */
+  transition: transform 0.2s; /* Animation */
   border-radius: 100%;
 }
 
 #paper_btn {
-  width: 200px;
-  height: 200px;
+  grid-column: 5;
+  aspect-ratio: 1/1;
+
   background: #f0f0f0 url("images/paper.png");
   background-position: center;
-  background-size: 200px 200px;
+  background-size: contain;
   background-repeat: no-repeat;
-  transition: transform 0.2s ease-in-out; /* Animation */
+  transition: transform 0.2s; /* Animation */
   border-radius: 100%;
 }
 
@@ -328,7 +322,7 @@ button:hover {
   align-items: center;
   aspect-ratio: 1/1;
   background-color: #2cd3e1;
-  font-size: 4rem;
+  font-size: var(--fs-900);
   font-weight: 700;
 }
 
@@ -353,7 +347,7 @@ button:hover {
 .score_card-scissors {
   background: #f0f0f0 url("images/scissors_small.png");
   background-position: center;
-  background-size: 100px 100px;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
 }
@@ -361,7 +355,7 @@ button:hover {
 .score_card-rock {
   background: #f0f0f0 url("images/rock_small.png");
   background-position: center;
-  background-size: 100px 100px;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
 }
@@ -369,7 +363,7 @@ button:hover {
 .score_card-paper {
   background: #f0f0f0 url("images/paper_small.png");
   background-position: center;
-  background-size: 100px 100px;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
 }
@@ -385,7 +379,6 @@ button:hover {
   margin: 24px auto 0 auto;
   height: 50px;
   text-align: center;
-
   font-weight: var(--fw-semi-bold);
 }
 
