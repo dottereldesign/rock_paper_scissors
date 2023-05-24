@@ -165,7 +165,7 @@ header {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header {
     font-size: var(--fs-800);
     margin-top: 24px;
@@ -231,57 +231,6 @@ main {
   font-weight: 600;
 }
 
-.result {
-  margin-top: 8px;
-  display: flex;
-  width: 650px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.result p {
-  font-size: 4rem;
-  font-weight: 800;
-  font-family: var(--ff-primary-200);
-}
-
-.names {
-  margin-top: 32px;
-  width: 650px;
-  display: flex;
-  justify-content: space-around;
-}
-
-h4 {
-  margin-bottom: 8px;
-  font-size: 1.5rem;
-}
-
-.score_wrapper {
-  text-align: center;
-}
-
-#score_user,
-#score_computer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 120px;
-  background-color: #2cd3e1;
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-#score_user {
-  border-radius: 100% 0 0 100%;
-}
-
-#score_computer {
-  background-color: #f266ab;
-  border-radius: 0 100% 100% 0;
-}
-
 button {
   background: none;
   color: inherit;
@@ -330,8 +279,27 @@ button:hover {
 }
 
 /* MAIN - RESULT */
+.result {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 650px);
+  margin: 32px auto 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result_heading {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.result_container {
+  display: flex;
+  align-items: center;
+}
+
 .result_player {
-  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,11 +309,53 @@ button:hover {
   display: flex;
 }
 
+.result p {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-extra-bold);
+  font-family: var(--ff-primary-200);
+}
+
+.vs_container {
+  padding: 0 16px;
+}
+
+.names {
+  margin-top: 32px;
+  width: 650px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.score_wrapper {
+  text-align: center;
+}
+
+#score_user,
+#score_computer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #2cd3e1;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#score_user {
+  border-radius: 100% 0 0 100%;
+}
+
+#score_computer {
+  background-color: #f266ab;
+  border-radius: 0 100% 100% 0;
+}
+
 #score_card-1,
 #score_card-2 {
   background-color: white;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,6 +383,120 @@ button:hover {
   background-size: 100px 100px;
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .result {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 650px);
+    margin: 8px auto 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .result_heading {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+  }
+
+  .result_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .result_player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .score_card-wrapper {
+    display: flex;
+  }
+
+  h4 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+  }
+
+  .result p {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-extra-bold);
+    font-family: var(--ff-primary-200);
+  }
+
+  .vs_container {
+    padding: 0 32px;
+  }
+
+  .names {
+    margin-top: 32px;
+    width: 650px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .score_wrapper {
+    text-align: center;
+  }
+
+  #score_user,
+  #score_computer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background-color: #2cd3e1;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  #score_user {
+    border-radius: 100% 0 0 100%;
+  }
+
+  #score_computer {
+    background-color: #f266ab;
+    border-radius: 0 100% 100% 0;
+  }
+
+  #score_card-1,
+  #score_card-2 {
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .score_card-scissors {
+    background: #f0f0f0 url("images/scissors_small.png");
+    background-position: center;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .score_card-rock {
+    background: #f0f0f0 url("images/rock_small.png");
+    background-position: center;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .score_card-paper {
+    background: #f0f0f0 url("images/paper_small.png");
+    background-position: center;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+  }
 }
 
 /* MAIN - SUMMARY */
